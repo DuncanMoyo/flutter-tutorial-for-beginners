@@ -57,7 +57,7 @@ class _MyAppState extends State<MyApp> {
     // aBool  false
 
     _totalScore += score;
-    
+
     setState(() {
       _questionIndex += 1;
     });
@@ -84,7 +84,7 @@ class _MyAppState extends State<MyApp> {
                 questionIndex: _questionIndex,
                 questions: _questions,
               )
-            : Result(),
+            : Result(_totalScore),
       ),
     );
   }
