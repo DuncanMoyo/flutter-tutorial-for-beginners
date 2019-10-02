@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    var questions = [
+    const questions = const [
       {
         'questionText': 'What\'s your favourite color?',
         'answers': ['Black', 'Red', 'Blue', 'Green'],
@@ -45,10 +45,13 @@ class _MyAppState extends State<MyApp> {
         'answers': ['Mosh', 'Max', 'Corey', 'Myself'],
       },
     ];
+
+    //questions = []; // this does not work if questions is a const 
+
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            title: Text('First of Many'),
+            title: Text('Duncan\'s Android App'),
           ),
           body: Column(
             children: [
